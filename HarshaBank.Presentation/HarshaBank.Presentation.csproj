@@ -50,9 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Harsha.Entities\Harsha.Entities.csproj">
+    <ProjectReference Include="..\Harsha.Entities\HarshaBank.Entities.csproj">
       <Project>{2ada887f-c529-4eb4-a9db-5b4028b6187f}</Project>
-      <Name>Harsha.Entities</Name>
+      <Name>HarshaBank.Entities</Name>
     </ProjectReference>
     <ProjectReference Include="..\HarshaBank.BusinessLogicLayer\HarshaBank.BusinessLogicLayer.csproj">
       <Project>{0b6ec438-195f-43ad-aa89-c83f1fc7f2d9}</Project>

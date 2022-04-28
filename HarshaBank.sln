@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32328.378
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarshaBank.Presentation", "HarshaBank.Presentation\HarshaBank.Presentation.csproj", "{EB2D2FE1-A797-4B58-BA4F-EC5CE55CCA4D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Harsha.Entities", "Harsha.Entities\Harsha.Entities.csproj", "{2ADA887F-C529-4EB4-A9DB-5B4028B6187F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarshaBank.Entities", "Harsha.Entities\HarshaBank.Entities.csproj", "{2ADA887F-C529-4EB4-A9DB-5B4028B6187F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HarshaBank.DataAccessLayer", "HarshaBank.DataAccessLayer\HarshaBank.DataAccessLayer.csproj", "{40EF83B9-AEBE-4E9D-8D57-3C5E6B5EA912}"
 EndProject
