@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EB2D2FE1-A797-4B58-BA4F-EC5CE55CCA4D}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>HarshaBank.Presentation</RootNamespace>
+    <AssemblyName>HarshaBank.Presentation</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Harsha.Entities\Harsha.Entities.csproj">
+      <Project>{2ada887f-c529-4eb4-a9db-5b4028b6187f}</Project>
+      <Name>Harsha.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HarshaBank.BusinessLogicLayer\HarshaBank.BusinessLogicLayer.csproj">
+      <Project>{0b6ec438-195f-43ad-aa89-c83f1fc7f2d9}</Project>
+      <Name>HarshaBank.BusinessLogicLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HarshaBank.Configuration\HarshaBank.Configuration.csproj">
+      <Project>{2da3c6ef-bd4a-420c-8564-8e71a4d3defe}</Project>
+      <Name>HarshaBank.Configuration</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HarshaBank.Exceptions\HarshaBank.Exceptions.csproj">
+      <Project>{0646243b-cf25-4f78-b795-43ff786d93ab}</Project>
+      <Name>HarshaBank.Exceptions</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
