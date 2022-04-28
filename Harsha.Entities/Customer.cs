@@ -2,12 +2,12 @@
 using HarshaBank.Entities.Contracts;
 using HarshaBank.Exceptions;
 
-namespace HarshBank.Entities
+namespace HarshaBank.Entities
 {
     /// <summary>
     /// Represents customer of the bank
     /// </summary>
-    public class Customer : ICustomer
+    public class Customer : ICustomer, ICloneable
     {
         #region Private fields
         private Guid _customerID;
@@ -105,6 +105,25 @@ namespace HarshBank.Entities
                 }
             }
         }
+        #endregion
+
+
+        #region Methods
+        public object Clone()
+        {
+            return new Customer() 
+            {
+                CustomerID = this.CustomerID,
+                CustomerCode = this.CustomerCode,
+                CustomerName = this.CustomerName,
+                Address = this.Address,
+                Landmark = this.Landmark,
+                City = this.City,
+                Country = this.Country,
+                Mobile = this.Mobile
+            };
+        }
+
         #endregion
     }
 }
