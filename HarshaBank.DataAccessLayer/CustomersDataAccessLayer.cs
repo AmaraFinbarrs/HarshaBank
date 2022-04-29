@@ -9,14 +9,14 @@ namespace HarshaBank.DataAccessLayer
     /// <summary>
     /// Represent the DAL for bank customers
     /// </summary>
-    public class CustomerDataAccessLayer : ICustomerDataAccessLayer
+    public class CustomersDataAccessLayer : ICustomersDataAccessLayer
     {
         #region Fields
         private List<Customer> _customers;
         #endregion
 
         #region Construtors
-        public CustomerDataAccessLayer()
+        public CustomersDataAccessLayer()
         {
             _customers = new List<Customer>();
         }
@@ -66,7 +66,7 @@ namespace HarshaBank.DataAccessLayer
         /// </summary>
         /// <param name="predicate">Lambda expression with condition</param>
         /// <returns>List of matching customers</returns>
-        public List<Customer> GetCustomerByCondition(Predicate<Customer> predicate)
+        public List<Customer> GetCustomersByCondition(Predicate<Customer> predicate)
         {
             try
             {
