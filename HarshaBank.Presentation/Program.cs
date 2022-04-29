@@ -1,4 +1,5 @@
-﻿class Program
+﻿using HarshaBank.Presentation;
+class Program
 {
     static void Main()
     {
@@ -49,11 +50,11 @@
                 {
                     case 1: CustomerMenu();  break;
                     case 2: AccountsMenu(); break;
-                    case 3: //TO DO: Display customer menu
+                    case 3: //TO DO: Display funds transfer
                         break;
-                    case 4: //TO DO: Display customer menu
+                    case 4: //TO DO: Display funds transfer statement below
                         break;
-                    case 5: //TO DO: Display customer menu
+                    case 5: //TO DO: Display account statement menu
                         break;
                 }
             }while(mainMenuChoice != 0);
@@ -84,12 +85,20 @@
             System.Console.WriteLine("1. Add Customer");
             System.Console.WriteLine("2. Delete Customer");
             System.Console.WriteLine("3. Update Customer");
-            System.Console.WriteLine("4. View Customer");
+            System.Console.WriteLine("4. Search Customers");
+            System.Console.WriteLine("5. View Customers");
             System.Console.WriteLine("0. Back to Main Menu");
 
             //accept customer menu choice
             System.Console.Write("Enter choice: ");
             customerMenuChoice = System.Convert.ToInt32(System.Console.ReadLine());
+
+            //create switch case
+            switch (customerMenuChoice)
+            {
+                case 1: CustomersPresentation.AddCustomer(); break;
+                case 5: CustomersPresentation.ViewCustomer(); break;
+            }
 
         } while(customerMenuChoice != 0);
     }
