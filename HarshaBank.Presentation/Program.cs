@@ -50,12 +50,9 @@ class Program
                 {
                     case 1: CustomerMenu();  break;
                     case 2: AccountsMenu(); break;
-                    case 3: //TO DO: Display funds transfer
-                        break;
-                    case 4: //TO DO: Display funds transfer statement below
-                        break;
-                    case 5: //TO DO: Display account statement menu
-                        break;
+                    case 3: FundsTransferMenu(); break;
+                    case 4: FundsTransferStatementMenu(); break;
+                    case 5: AccountStatementMenu(); break;
                 }
             }while(mainMenuChoice != 0);
 
@@ -97,6 +94,9 @@ class Program
             switch (customerMenuChoice)
             {
                 case 1: CustomersPresentation.AddCustomer(); break;
+                case 2: CustomersPresentation.DeleteCustomer(); break;
+                case 3: CustomersPresentation.UpdateCustomer(); break;
+                case 4: CustomersPresentation.SearchCustomer(); break;
                 case 5: CustomersPresentation.ViewCustomer(); break;
             }
 
@@ -125,4 +125,67 @@ class Program
 
         } while (accountsMenuChoice != 0);
     }
+
+    static void FundsTransferMenu()
+    {
+        //variable to store customers menu choice
+        int accountsMenuChoice = -1;
+
+        //do-while
+        do
+        {
+            //print customers menu
+            System.Console.WriteLine("\n:::Funds Transfer menu:::");
+            System.Console.WriteLine("1. Transfer Between Bank Accounts");
+            System.Console.WriteLine("0. Back to Main Menu");
+
+            //accept customer menu choice
+            System.Console.Write("Enter choice: ");
+            accountsMenuChoice = System.Convert.ToInt32(System.Console.ReadLine());
+
+        } while (accountsMenuChoice != 0);
+    }
+
+    static void FundsTransferStatementMenu()
+    {
+        //variable to store customers menu choice
+        int accountsMenuChoice = -1;
+
+        //do-while
+        do
+        {
+            //print customers menu
+            System.Console.WriteLine("\n:::Funds Transfer Statement menu:::");
+            System.Console.WriteLine("1. View List of Funds Transfer");
+            System.Console.WriteLine("0. Back to Main Menu");
+
+            //accept customer menu choice
+            System.Console.Write("Enter choice: ");
+            accountsMenuChoice = System.Convert.ToInt32(System.Console.ReadLine());
+
+        } while (accountsMenuChoice != 0);
+    }
+
+    static void AccountStatementMenu()
+    {
+        //variable to store customers menu choice
+        int accountsMenuChoice = -1;
+
+        //do-while
+        do
+        {
+            //print customers menu
+            System.Console.WriteLine("\n:::Accounts Statement Menu:::");
+            System.Console.WriteLine("1. View Debit Transactions");
+            System.Console.WriteLine("2. View Credit Transaction");
+            System.Console.WriteLine("3. View All Transaction");
+            System.Console.WriteLine("0. Back to Main Menu");
+
+            //accept customer menu choice
+            System.Console.Write("Enter choice: ");
+            accountsMenuChoice = System.Convert.ToInt32(System.Console.ReadLine());
+
+        } while (accountsMenuChoice != 0);
+    }
+
 }
